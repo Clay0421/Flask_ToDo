@@ -1,4 +1,0 @@
-Requirements:
-Python 3 or newer
-pip3 or newer
-Flask 3 or newer recommended

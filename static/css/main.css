@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+table {
+    border: 1px solid grey;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid grey;
+}

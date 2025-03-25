@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -5,7 +6,8 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
-app.secret_key = "47287204857"
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')
+#app.secret_key = "47287204857"
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
